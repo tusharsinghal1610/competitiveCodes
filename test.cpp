@@ -1,37 +1,24 @@
-#include <iostream>
-#include<vector>
-#include<deque>
+#include<iostream>
 using namespace std;
-
-int main() {
-	// your code goes here
-	long long int n;
-	cin>>n;
-	vector <long long int> a(n);
-	for(long long int i=0;i<n;i++){
-		cin>>a[i];
-	}
-	long long int k;
-	cin>>k;
-	deque <int> q;
-	long long int i;
-	for(i=0;i<k;i++){
-		while(!q.empty() && a[i]>=a[q.back()]){
-			q.pop_back();
-		}
-		q.push_back(i);
-	}
-	cout<<a[q.front()]<<" ";
-	for(;i<n;i++){
-		while(!q.empty() && a[i]>=a[q.back()]){
-			q.pop_back();
-		}
-		q.push_back(i);
-		while(q.front() <= i-k){
-			q.pop_front();
-		}
-		cout<<a[q.front()]<<" ";
-	}
-	
-	return 0;
+struct node{
+	int ul;
+	int ur;
+};
+int main(){
+/*	int n=10;
+	string s;
+	int length;
+	while(n--){
+		cin>>length;
+		cin>>string;
+		int *tree = new int[4*length+1];
+		build_tree();
+	}*/
+	node *st;
+	st = new node[10];
+	st[0].ul=5;
+	st[0].ur=3;
+	swap(st[0].ul,st[0].ur);
+	cout<<st[0].ul;
+	cout<<endl;
 }
