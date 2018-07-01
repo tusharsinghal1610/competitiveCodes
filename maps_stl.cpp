@@ -9,8 +9,8 @@ int main(){
 	mp['d']=8;
 	//cout<<mp.begin()->first;
 	mp.erase('b');
-	mp.insert(make_pair('b',9));
 	cout<<mp['b'];
-	
+	int *a = new int[5];
+	cout<<a[0];
 	return 0;
 }
